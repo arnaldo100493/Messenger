@@ -45,7 +45,7 @@ public class VistaCliente extends JFrame {
             @Override
             public void run() {
                 try {
-                    areaChat.setText("Buscando servidor...");
+                    areaChat.setText("Buscando Servidor...");
                     socket = new Socket("127.0.0.1", 9000); //Se conecta a la dirección 127.0.0.1(que hace referencia a localhost) y el puerto 9000
                     areaChat.setText("Conectado a: " + socket.getInetAddress().getHostName());
                     leer();
