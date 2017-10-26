@@ -17,7 +17,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import static messenger.VistaCliente.areaChat;
 import utilidades.LimpiarComponentes;
 
 /**
@@ -77,7 +76,7 @@ public class VistaServidor extends JFrame {
                     lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     while (true) {
                         String mensajeEntrada = lector.readLine();
-                        areaChat.setText("Servidor dice: " + mensajeEntrada + "\n");
+                        areaChat.setText("Cliente dice: " + mensajeEntrada + "\n");
                     }
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(null, "Ocurrió un error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
