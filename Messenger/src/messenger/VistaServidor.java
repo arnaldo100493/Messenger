@@ -51,6 +51,7 @@ public class VistaServidor extends JFrame {
                     serverSocket = new ServerSocket(9000); //Número del puerto del servidor.
                     while (true) {
                         socket = serverSocket.accept(); //El servidor acepta las conexiones.
+                        areaChat.setText("Conectado a: " + socket.getInetAddress().getHostName());
                         leer();
                         escribir();
                     }
